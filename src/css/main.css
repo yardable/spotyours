@@ -106,3 +106,14 @@ BUTTON
 .button{
     margin-top: 10px;
 }
+
+/* 
+text
+*/
+.coolboldtext{
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+}
+.cooltext{
+    font-size: smaller;
+}
