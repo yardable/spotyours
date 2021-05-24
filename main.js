@@ -16,20 +16,20 @@ $('#send_email').click(function(e){
 				$('#js_alert_success').css({'display' : 'block'});
 				setTimeout(function(){
 					$('#js_alert_success').css({'display' : 'none'});//ça cache après le message de succès
-					$('#E-mail').val("");
-					$('#First name').val("");
-					$('#Last name').val("");
-					$('#Your message').val("")
+					$('#E-mail').val("email");
+					$('#First name').val("name");
+					$('#Last name').val("objet");
+					$('#Your message').val("message")
 				}, 3000);
 			},
 			error: function(data) {//callback cas2
 				$('#js_alert_danger').css({'display' : 'block'});
 				setTimeout(function(){
 					$('#js_alert_danger').css({'display' : 'none'});
-					$('#E-mail').val("");
-					$('#First name').val("");
-					$('#Last name').val("");
-					$('#Your message').val("")
+					$('#E-mail').val("email");
+					$('#First name').val("name");
+					$('#Last name').val("objet");
+					$('#Your message').val("message")
 				}, 3000);
 			}
 		});
