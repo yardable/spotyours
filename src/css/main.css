@@ -1,0 +1,108 @@
+/*
+GLOBAL
+*/
+.heading-site{/* pour bien mettre en forme les gros titres */
+    text-align: center;
+    font-family:  'Montserrat', sans-serif;
+    font-size: larger;
+}
+
+.COLORED{/* pour les cases en bas de la page */
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+}
+
+
+/*
+HEADER
+*/
+.header {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    height: 70px;
+    line-height: 70px;
+    background-color: rgba(0, 0,0);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.header .header-logo{
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    margin-left: 20px;
+}
+
+.header .header-menu{
+    float: right;
+    margin-right: 30px;
+}
+
+.header .header-menu a{
+    margin-right: 15px;
+    color:white
+}
+
+.header .header-menu a:hover{
+    color: #3498db
+}
+
+/*
+BANNER
+*/
+.banner {
+    margin-top: -20px;
+}
+
+.banner .banner-image {
+    position: relative;
+}
+
+.banner .banner-content{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 30%;
+}
+
+.banner .banner-content h1,
+.banner .banner-content h2{
+    color :white
+}
+
+/*
+ABOUT
+*/
+.about .about-single-element i{
+    font-size: 30px;
+    text-align: center;
+}
+
+.about .about-single-element{/* placement */
+    text-align: center;
+}
+
+.about .about-single-element p{/* placement */
+    text-align: left;
+    margin-top: 10px;
+}
+
+/* 
+FOOTER
+*/
+.footer .footer-information{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 
+BUTTON
+*/
+.button{
+    margin-top: 10px;
+}
