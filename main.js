@@ -16,9 +16,9 @@ $('#send_email').click(function(e){
 				$('#js_alert_success').css({'display' : 'block'});
 				setTimeout(function(){
 					$('#js_alert_success').css({'display' : 'none'});//ça cache après le message de succès
-					$('#email').val("");
-					$('#name').val("");
-					$('#object').val("");
+					$('#E-mail').val("");
+					$('#First name').val("");
+					$('#Last name').val("");
 					$('#Your message').val("")
 				}, 3000);
 			},
