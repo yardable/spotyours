@@ -173,7 +173,7 @@
             <footer class="footer">
                 <h2 id="Contact_us" class="heading-site">Contact us</h2>
                 <div class="footer-contact-form">
-                    <form>
+                    <form method="POST" action="mail.php">
                         <div class="field"><!-- de Bulma -->
                             <label class="label">Last name</label>
                             <div class="control">
@@ -198,8 +198,9 @@
                                 <textarea id="YourMessage" class="textarea" placeholder="Explain how we can help you" name="Yourmessage"></textarea>
                             </div>
                           </div>
+                          <button class="button is-link" id='send_email'>Send</button>
                     </form>
-                    <button class="button is-link" id='send_email'>Send</button>
+
                 </div>
                 <div class="footer-information">
                     <p>
