@@ -2,10 +2,10 @@
 $('#send_email').click(function(e){
 		e.preventDefault();// <!-- éviter le refresh -->
 		var data = {
-			email: $('#E-mail').val(),
-			name: $('#First name').val(),
-			objet: $('#Last name').val(),
-			message: $('#Your message').val()
+			email: $('#Email').val(),
+			name: $('#Firstname').val(),
+			objet: $('#Lastname').val(),
+			message: $('#Yourmessage').val()
 		};
         //ajax méthode de jquery
 		$.ajax({
@@ -16,20 +16,20 @@ $('#send_email').click(function(e){
 				$('#js_alert_success').css({'display' : 'block'});
 				setTimeout(function(){
 					$('#js_alert_success').css({'display' : 'none'});//ça cache après le message de succès
-					$('#E-mail').val("");//vider les champs
-					$('#First name').val("");
-					$('#Last name').val("");
-					$('#Your message').val("")
+					$('#Email').val("");//vider les champs
+					$('#Firstname').val("");
+					$('#Lastname').val("");
+					$('#Yourmessage').val("")
 				}, 3000);
 			},
 			error: function(data) {//callback cas2
 				$('#js_alert_danger').css({'display' : 'block'});
 				setTimeout(function(){
 					$('#js_alert_danger').css({'display' : 'none'});
-					$('#E-mail').val("");
-					$('#First name').val("");
-					$('#Last name').val("");
-					$('#Your message').val("")
+					$('#Email').val("");
+					$('#Firstname').val("");
+					$('#Lastname').val("");
+					$('#Yourmessage').val("")
 				}, 3000);
 			}
 		});
