@@ -1,10 +1,10 @@
 <!-- tiré de https://gist.github.com/AntoninMarchardDev/92cedeb61ffc980a2074f5786fde0df0 -->
 <?php
 if($_POST){
-  $firstname = $_POST['First name'];
-  $lastname = $_POST['Last name'];
-  $email = $_POST['E-mail'];
-  $message = $_POST['Your message'];
+  $firstname = $_POST['Firstname'];
+  $lastname = $_POST['Lastname'];
+  $email = $_POST['Email'];
+  $message = $_POST['Yourmessage'];
 
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n"; //vérification que c bien un mail
