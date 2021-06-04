@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <!--head-->
+    <head>
+        <meta charset="utf-8">
+        <title> EasyStream </title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <link rel="stylesheet" href="src/css/main.css">
+
+        <!-- CSS -->
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <!-- Font -->
+
+        
+    </head>
+
+    <!--head-->
+
+    <!--body-->
+    <body>
+        <!-- header -->
+        <div class="block">
+            <header class="header">
+                <a href="#" class="header-logo"><img src="src/img/logo1.png"></a>
+                <nav class="header-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About us.html">About us</a></li>
+                        <li><a href="Download link.html">Download</a></li>
+                        <li><a href="Contacts.html">Contacts</a></li>
+                        <li><a href="How can I use it.html">How can I use it?</a></li>
+                        <li><a href="Support us!.html">Support us!</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+  &nbsp;
+  <!-- Contact -->
+  <body>
+    <header>
+      <div id="logo"></div>
+      <form name="newUser"
+        class="box" id="new-user" onsubmit="return false">
+        <div class="block">
+          <footer class="footer">
+              <h2 id="Contact_us" class="heading-site">Contact us</h2>
+              <div class="footer-contact-form">
+                      <div class="field">
+                          &nbsp; 
+                          <label class="label">Last name</label>
+                          <div class="control">
+                            <input type="text" class="input" name="lastname" placeholder="e.g Smith" required="">
+                          </div>
+                        </div>
+                        <div class="field">
+                          &nbsp; 
+                          <label class="label">First name</label>
+                          <div class="control">
+                            <input type="text" class="input" name="firstname" placeholder="e.g Alex" required="">
+                          </div>
+                        </div>
+                        <div class="field">
+                          &nbsp; 
+                          <label class="label">E-mail</label>
+                          <div class="control">
+                            <input type="email" class ="input" name="email" placeholder="e.g Alex.Smith@mail.com" required="">
+                          </div>
+                        </div>
+                        <div class="field">
+                          &nbsp; 
+                          <label class="label">Message</label>
+                          <div class="control">
+                            <input type="text" class="input" name="message" placeholder="Explain how we can help you" required="">
+                          </div>
+                        </div>
+          
+          
+          
+          
+        </div>
+        &nbsp;
+        <div class="container left">
+          <button id="submit" type="submit" class="button" onclick="addElem()">Add</button>
+        </div>
+      </form>
+    </header>
+  
+  
+    <main>
+      <div class="box">
+        <table class="datatable">
+          <thead>
+            <tr>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Email</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+  
+    <script charset="utf-8">
+  
+      var newUserForm = document.forms.newUser;
+      var ajou = document.getElementById('submit');
+      var totalSeconds = 10;
+      var intervalId = null;
+      start();
+      function addElem() {
+        console.log(newUserForm.elements.firstname.value)
+  
+        const newItem = document.createElement('tr')
+        const firstnameTd = document.createElement('td')
+        const lastnameTd = document.createElement('td')
+        const emailTd = document.createElement('td')
+        const messageTd = document.createElement('td')
+        firstnameTd.textContent = document.newUser.firstname.value
+        lastnameTd.textContent = document.newUser.lastname.value
+        emailTd.textContent = document.newUser.email.value
+        messageTd.textContent = document.newUser.message.value
+  
+  
+        newItem.append(firstnameTd, lastnameTd, emailTd, messageTd)
+        /* le premier élément dans le document qui contient la classe "datatable" est retourné*/
+        const table = document.querySelector('.datatable tbody')
+        table.appendChild(newItem)
+        start();
+      }
+  
+      function finish(){
+        clearInterval(intervalId);
+        document.getElementById("submit").innerHTML = "Add";
+        totalSeconds=10;
+      }
+  
+      function timer() {
+        totalSeconds--;
+        if (totalSeconds == 0){
+          ajou.removeAttribute('disabled');
+          clearInterval(intervalID);
+          finish();
+        }
+        else{
+          ajou.setAttribute('disabled', 'disabled');
+          document.getElementById("submit").innerHTML = "Add " + "(" + totalSeconds + ")";
+        }
+      }
+  
+      function start(){
+        intervalID = setInterval(timer, 1000);
+      }
+  
+      
+      function removeAll() {
+        const tbody = document.querySelector('.datatable tbody')
+        while (tbody.firstChild) {
+          tbody.removeChild(tbody.firstChild)
+        }
+      }
+  
+  
+    </script>
+
+  </body>       
+    <div class="block">    
+        <footer class="footer">
+            <div class="footer-information">
+                <p>
+                    30- 32 Avenue de la République
+                </p>
+                <p>
+                    94800 Villejuif
+                </p>
+                <p>
+                  E-mail : xavier.ta@efrei.net
+                </p>
+                <p>
+                  EasyStream ©
+                </p>            
+            </div>
+        </footer>
+    </div>
+</html>
