@@ -75,7 +75,7 @@ BANNER
 
 .banner .banner-content{
     position: absolute;
-    width: 100%;
+    width: 50%;
     text-align: center;
     top: 30%;
 }
