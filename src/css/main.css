@@ -112,6 +112,7 @@ FOOTER
 }
 .footer .footer-information ul{
     padding: 0;
+    text-align: center;
 }
 .footer .footer-information ul li{
     display: inline-block;
