@@ -108,11 +108,15 @@ FOOTER
 */
 .footer .footer-information{
     text-align: center;
-    margin-top: 3px;
-    padding-top: 0;
-    padding-bottom: 0;
+    margin-top: 30px;
 }
-
+.footer .footer-information ul{
+    padding 0;
+}
+.footer .footer-information ul li{
+    display: inline-block;
+    list-style-type: none;
+}
 /* 
 BUTTON
 */
