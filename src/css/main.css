@@ -117,6 +117,7 @@ FOOTER
 .footer .footer-information ul li{
     display: inline-block;
     list-style-type: none;
+    text-align: center;
 }
 /* 
 BUTTON
