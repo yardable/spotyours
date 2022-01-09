@@ -109,7 +109,8 @@ FOOTER
 .footer .footer-information{
     text-align: center;
     margin-top: 3px;
-    box-sizing:border-box;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* 
